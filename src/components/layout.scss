@@ -1,0 +1,129 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+p {
+  font-weight: 400;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+main {
+  padding-bottom: 1px;
+  min-height: calc(100vh - 8.0575rem);
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.1875rem 0.375rem;
+  border-radius: 0.1875rem;
+  color: black;
+  margin: 1rem 0 0;
+  position: relative;
+}
+
+.layout {
+  background-image: linear-gradient(
+    to bottom,
+    #004b9b,
+    #354d9f,
+    #504ea2,
+    #674ea4,
+    #7b4fa5,
+    #9350a3,
+    #a851a0,
+    #bb549c,
+    #d35a93,
+    #e76489,
+    #f5727e,
+    #ff8374
+  );
+  min-height: 100vh;
+  color: white;
+}
+
+a {
+  color: #f1c40f;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:not(:empty):not([data-img]) {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.1875rem 0.375rem;
+    border-radius: 0.1875rem;
+  }
+}
+
+.invert-image {
+  filter: invert(1);
+}
+
+.popover {
+  &:hover {
+    cursor: pointer;
+
+    & + .popover__content {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.15s linear;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.625rem) saturate(1.25);
+    padding: 0.1875rem 0.375rem;
+    border-radius: 0.1875rem;
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    left: 0;
+  }
+}
+
+a {
+  line-height: 2rem;
+}
+
+span[role="img"] {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .timeline-element {
+    opacity: 0;
+    transform: translate(-50px, 0px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  a {
+    line-height: 1.15rem;
+  }
+
+  span[role="img"] {
+    display: inline;
+  }
+}
