@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{RXBc:function(n,o,i){"use strict";i.r(o);o.default=function(){var n="undefined"!=typeof window&&window;return n&&(n.location="/conventional-commits/0/"),null}}}]);
+//# sourceMappingURL=component---src-pages-index-js-955837448f6db3fc224e.js.map
