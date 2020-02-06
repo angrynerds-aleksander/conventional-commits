@@ -41,7 +41,7 @@ const Layout = ({
           }
         }
       }
-
+      
       setCurrentElement(0)
       redirect(keyCode, nextPage, previousPage)
     },

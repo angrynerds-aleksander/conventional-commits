@@ -3,28 +3,28 @@ export const redirect = (keyCode, nextPage, previousPage) => {
 
   if (keyCode === 39) {
     if (nextPage !== null) {
-      link = document.querySelector(`a[href='/${nextPage}/']`);
+      link = document.querySelector(`a[href='/conventional-commits/${nextPage}/']`);
     }
   } else if (keyCode === 37) {
     if (previousPage !== null) {
-      link = document.querySelector(`a[href='/${previousPage}/']`);
+      link = document.querySelector(`a[href='/conventional-commits/${previousPage}/']`);
     }
   } else if (keyCode === 48) {
-    link = document.querySelector("a[href='/0/']");
+    link = document.querySelector("a[href='/conventional-commits/0/']");
   } else if (keyCode === 49) {
-    link = document.querySelector("a[href='/1/']");
+    link = document.querySelector("a[href='/conventional-commits/1/']");
   } else if (keyCode === 50) {
-    link = document.querySelector("a[href='/2/']");
+    link = document.querySelector("a[href='/conventional-commits/2/']");
   } else if (keyCode === 51) {
-    link = document.querySelector("a[href='/3/']");
+    link = document.querySelector("a[href='/conventional-commits/3/']");
   } else if (keyCode === 52) {
-    link = document.querySelector("a[href='/4/']");
+    link = document.querySelector("a[href='/conventional-commits/4/']");
   } else if (keyCode === 53) {
-    link = document.querySelector("a[href='/5/']");
+    link = document.querySelector("a[href='/conventional-commits/5/']");
   } else if (keyCode === 54) {
-    link = document.querySelector("a[href='/6/']");
+    link = document.querySelector("a[href='/conventional-commits/6/']");
   }
-
+  
   if (link) {
     const rect = link.getBoundingClientRect();
     const event = new MouseEvent('click', {
