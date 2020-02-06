@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-dc00e459c0941f7d19e6.js"
+    "url": "webpack-runtime-d2b76c0b57766340f652.js"
   },
   {
     "url": "styles.62324b7923a26007cff2.css"
@@ -39,14 +39,14 @@ self.__precacheManifest = [
     "url": "commons-9056577f578b8bdeb3c2.js"
   },
   {
-    "url": "app-e0c5cb6575bd379c4033.js"
+    "url": "app-5b5a9997bab7cf1265fe.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-bb5433fc5c978771af2b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d319348cb628efc56e4bcc3b71caf680"
+    "revision": "2ed9dd44fe304b30de9988cf1498bc63"
   },
   {
     "url": "google-fonts/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gfD_g.woff2",
@@ -154,12 +154,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/conventional-commits`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-e0c5cb6575bd379c4033.js`))) {
+  if (!resources || !(await caches.match(`/conventional-commits/app-5b5a9997bab7cf1265fe.js`))) {
     return await fetch(event.request)
   }
 
@@ -172,7 +172,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/conventional-commits/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
